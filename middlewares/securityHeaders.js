@@ -124,6 +124,11 @@ export const getCorsConfig = (allowedOrigins = []) => {
                 return callback(null, true);
             }
 
+            // Allow any vercel.app previews
+            if (origin.endsWith('.vercel.app')) {
+                return callback(null, true);
+            }
+
             // In development, allow all origins
             if (process.env.NODE_ENV === 'development') {
                 return callback(null, true);
