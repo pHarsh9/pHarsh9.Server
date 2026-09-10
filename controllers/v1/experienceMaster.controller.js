@@ -27,7 +27,7 @@ export const createExperience = async (req, res) => {
 
 export const listAllExperiences = async (req, res) => {
   try {
-    const experiences = await ExperienceMaster.find({ isActive: true });
+    const experiences = await ExperienceMaster.find({ isActive: true }).sort({ createdAt: -1 });
     res.status(200).json({ isOk: true, data: experiences });
   } catch (error) {
     console.error("Error fetching experiences:", error);
