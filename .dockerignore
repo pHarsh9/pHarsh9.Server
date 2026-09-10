@@ -1,0 +1,6 @@
+# Exclude node_modules so Docker installs dependencies freshly inside Linux
+node_modules
+npm-debug.log
+.env
+uploads
+.git

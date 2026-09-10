@@ -7,9 +7,9 @@ export const getProfile = async (req, res) => {
       // Create a default if none exists to avoid failures
       profile = await ProfileMaster.create({
         socialLinks: [
-          { platform: "LinkedIn", url: "https://linkedin.com" },
-          { platform: "Instagram", url: "https://instagram.com" },
-          { platform: "GitHub", url: "https://github.com/pHarsh9" }
+          { platform: "LinkedIn", url: "https://linkedin.com/in/pharsh9" },
+          { platform: "Instagram", url: "https://instagram.com/p.harsh9" },
+          { platform: "GitHub", url: "https://github.com/pharsh9" }
         ]
       });
     }
